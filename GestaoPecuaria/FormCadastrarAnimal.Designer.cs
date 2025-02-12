@@ -44,6 +44,7 @@
             this.btCadastrarAnimal2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPesoAnimal = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -186,23 +187,35 @@
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(173, 219);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 19);
+            this.label8.Size = new System.Drawing.Size(69, 19);
             this.label8.TabIndex = 16;
-            this.label8.Text = "Peso:";
+            this.label8.Text = "Peso KG:";
             // 
             // txtPesoAnimal
             // 
             this.txtPesoAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoAnimal.Location = new System.Drawing.Point(221, 216);
+            this.txtPesoAnimal.Location = new System.Drawing.Point(248, 216);
             this.txtPesoAnimal.Name = "txtPesoAnimal";
-            this.txtPesoAnimal.Size = new System.Drawing.Size(407, 26);
+            this.txtPesoAnimal.Size = new System.Drawing.Size(380, 26);
             this.txtPesoAnimal.TabIndex = 4;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(58, 55);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 36);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "*";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormCadastrarAnimal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtPesoAnimal);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btCadastrarAnimal2);
@@ -244,5 +257,6 @@
         private System.Windows.Forms.Button btCadastrarAnimal2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPesoAnimal;
+        private System.Windows.Forms.Label label9;
     }
 }

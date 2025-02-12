@@ -21,20 +21,18 @@ namespace GestaoPecuaria
         {
             try
             {
-                if (!txtNomeNumeracaoAnimal.Text.Equals("") && !txtRacaAnimal.Text.Equals("") && !cbSexoAnimal.Text.Equals("")
-                    && !txtDataNascAnimal.Text.Equals("") && !txtPesoAnimal.Text.Equals("")
-                    && !txtDataUltimaVascAnimal.Text.Equals("") && !txtObservacaoAnimal.Text.Equals(""))
+                if (!txtNomeNumeracaoAnimal.Text.Equals("") && !txtRacaAnimal.Text.Equals("") && !cbSexoAnimal.Text.Equals(""))
                 {
                     Animal a = new Animal();
-                    string nome = txtNomeNumeracaoAnimal.Text;
-                    a.SetNome(nome);
+                    string nomeNumeracao = txtNomeNumeracaoAnimal.Text;
+                    a.SetNomeNumeracao(nomeNumeracao);
                     string raca = txtRacaAnimal.Text;
                     a.SetRaca(raca);
                     string sexo = cbSexoAnimal.Text;
                     a.SetSexo(sexo);
                     string dataNascimento = txtDataNascAnimal.Text;
                     a.SetDataNascimento(dataNascimento);
-                    decimal peso = Convert.ToDecimal(txtPesoAnimal.Text);
+                    string peso = txtPesoAnimal.Text;
                     a.SetPeso(peso);
                     string UltimaVascinacao = txtDataUltimaVascAnimal.Text;
                     a.SetUltimaVacinacao(UltimaVascinacao);
@@ -44,10 +42,19 @@ namespace GestaoPecuaria
                     a.GetReturn();
 
                     MessageBox.Show("Animal cadastrado com sucesso!", "Cadastrar Animal", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtNomeNumeracaoAnimal.Clear();
+                    txtRacaAnimal.Clear();
+                    cbSexoAnimal.SelectedIndex = -1;
+                    txtDataNascAnimal.Clear();
+                    txtPesoAnimal.Clear();
+                    txtDataUltimaVascAnimal.Clear();
+                    txtObservacaoAnimal.Clear();
+                    txtNomeNumeracaoAnimal.Focus();
                 }
                 else
                 {
-                    MessageBox.Show("Preencha todos os campos!", "Cadastrar Animal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Preencha os campos obrigatórios!", "Cadastrar Animal", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtNomeNumeracaoAnimal.Clear();
                     txtRacaAnimal.Clear();
                     cbSexoAnimal.SelectedIndex = -1;
