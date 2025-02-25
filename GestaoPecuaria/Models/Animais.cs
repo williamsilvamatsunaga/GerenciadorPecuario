@@ -2,14 +2,14 @@
 using System.Globalization;
 using System.Windows.Forms;
 
-public class Animal
+public class Animais
 {
     private int idAnimal;
     private string nomeNumeracao;
     private string raca;
     private string sexo;
     private string dataNascimento;
-    private string peso;
+    private decimal peso;
     private string ultimaVacinacao;
     private string observacao;
 
@@ -27,7 +27,7 @@ public class Animal
 
     public void SetRaca(string raca)
     {
-        if (nomeNumeracao.Length <= 50)
+        if (raca.Length <= 50)
         {
             this.raca = raca;
         }
@@ -63,13 +63,13 @@ public class Animal
         }
     }
 
-    public void SetPeso(string peso)
+    public void SetPeso(decimal peso)
     {
-        if (peso.Length <= 0)
+        if (peso <= 0)
         {
             throw new Exception("O peso do animal deve ser maior que zero.");
         }
-        else if (peso.Length > 1000)
+        else if (peso > 1000)
         {
             throw new Exception("O peso informado é muito alto. Verifique novamente.");
         }
@@ -100,7 +100,7 @@ public class Animal
         this.observacao = observacao;
     }
 
-    public string GetReturn()
+    public bool GetReturn()
     {
         string mensagem = "Nome: " + this.nomeNumeracao + "\n" +
                           "Raça: " + this.raca + "\n" +
@@ -110,7 +110,7 @@ public class Animal
                           "Data da última vacinação: " + this.ultimaVacinacao + "\n" +
                           "Observação: " + this.observacao;
 
-        MessageBox.Show(mensagem, "Confirme os dados", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-        return mensagem;
+        DialogResult no = MessageBox.Show(mensagem, "Confirme os dados", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+        return no == DialogResult.Yes;
     }
 }

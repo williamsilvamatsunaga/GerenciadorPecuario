@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btCadastrarAnimal = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -46,7 +47,7 @@
             // 
             this.btCadastrarAnimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btCadastrarAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCadastrarAnimal.Location = new System.Drawing.Point(161, 221);
+            this.btCadastrarAnimal.Location = new System.Drawing.Point(319, 152);
             this.btCadastrarAnimal.Name = "btCadastrarAnimal";
             this.btCadastrarAnimal.Size = new System.Drawing.Size(139, 32);
             this.btCadastrarAnimal.TabIndex = 1;
@@ -54,16 +55,26 @@
             this.btCadastrarAnimal.UseVisualStyleBackColor = false;
             this.btCadastrarAnimal.Click += new System.EventHandler(this.btCadastrarAnimal_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(165, 234);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btCadastrarAnimal);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -71,6 +82,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btCadastrarAnimal;
+        private System.Windows.Forms.Label label2;
     }
 }
 

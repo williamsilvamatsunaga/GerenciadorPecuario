@@ -23,7 +23,7 @@ namespace GestaoPecuaria
             {
                 if (!txtNomeNumeracaoAnimal.Text.Equals("") && !txtRacaAnimal.Text.Equals("") && !cbSexoAnimal.Text.Equals(""))
                 {
-                    Animal a = new Animal();
+                    Animais a = new Animais();
                     string nomeNumeracao = txtNomeNumeracaoAnimal.Text;
                     a.SetNomeNumeracao(nomeNumeracao);
                     string raca = txtRacaAnimal.Text;
@@ -32,14 +32,20 @@ namespace GestaoPecuaria
                     a.SetSexo(sexo);
                     string dataNascimento = txtDataNascAnimal.Text;
                     a.SetDataNascimento(dataNascimento);
-                    string peso = txtPesoAnimal.Text;
+                    decimal peso = Convert.ToDecimal(txtPesoAnimal.Text);
                     a.SetPeso(peso);
                     string UltimaVascinacao = txtDataUltimaVascAnimal.Text;
                     a.SetUltimaVacinacao(UltimaVascinacao);
                     string observacao = txtObservacaoAnimal.Text;
                     a.SetObservacao(observacao);
 
-                    a.GetReturn();
+                    bool no = a.GetReturn();
+
+                    if (!no)
+                    {
+                        MessageBox.Show("Edite os dados conforme necessário.", "Editar Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
 
                     MessageBox.Show("Animal cadastrado com sucesso!", "Cadastrar Animal", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
