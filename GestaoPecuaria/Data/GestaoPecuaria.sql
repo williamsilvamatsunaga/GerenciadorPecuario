@@ -70,6 +70,8 @@ CREATE TABLE Animais (
     FOREIGN KEY (fk_id_venda) REFERENCES Vendas (id_venda)
 );
 
+select * from animais;
+
 CREATE TABLE RebanhoAnimal (
     id_rebanhoAnimal INT PRIMARY KEY AUTO_INCREMENT,
     fk_id_rebanho INT NOT NULL,

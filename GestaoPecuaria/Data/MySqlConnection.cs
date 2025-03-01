@@ -2,11 +2,11 @@
 
 namespace GestaoPecuaria.Data
 {
-    internal class MySqlConnection
+    internal class MySqlConnection2
     {
         private string strconexao;
 
-        public MySqlConnection(string strconexao)
+        public MySqlConnection2(string strconexao)
         {
             this.strconexao = strconexao;
         }

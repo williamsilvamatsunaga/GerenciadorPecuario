@@ -1,8 +1,10 @@
-﻿using System;
+﻿using GestaoPecuaria.dao;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,23 +27,38 @@ namespace GestaoPecuaria
                 {
                     Animais a = new Animais();
                     string nomeNumeracao = txtNomeNumeracaoAnimal.Text;
-                    a.SetNomeNumeracao(nomeNumeracao);
+                    a.NomeNumeracao(nomeNumeracao);
                     string raca = txtRacaAnimal.Text;
-                    a.SetRaca(raca);
+                    a.Raca(raca);
                     string sexo = cbSexoAnimal.Text;
-                    a.SetSexo(sexo);
-                    string dataNascimento = txtDataNascAnimal.Text;
-                    a.SetDataNascimento(dataNascimento);
+                    a.Sexo(sexo);
+                    DateTime dataNascimento;
+                    if (!DateTime.TryParseExact(txtDataNascAnimal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out dataNascimento))
+                    {
+                        MessageBox.Show("Data de nascimento inválida! Use o formato dd/MM/yyyy.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtDataNascAnimal.Clear();
+                        txtDataNascAnimal.Focus();
+                        return;
+                    }
+                    a.DataNascimento(dataNascimento);
+                    a.DataNascimento(dataNascimento);
                     decimal peso = Convert.ToDecimal(txtPesoAnimal.Text);
-                    a.SetPeso(peso);
-                    string UltimaVascinacao = txtDataUltimaVascAnimal.Text;
-                    a.SetUltimaVacinacao(UltimaVascinacao);
+                    a.Peso(peso);
+                    DateTime ultimaVacinacao;
+                    if (!DateTime.TryParseExact(txtDataUltimaVascAnimal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out ultimaVacinacao))
+                    {
+                        MessageBox.Show("Data da última vacinação inválida! Use o formato dd/MM/yyyy.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        txtDataUltimaVascAnimal.Clear();
+                        txtDataUltimaVascAnimal.Focus();
+                        return;
+                    }
+                    a.UltimaVacinacao(ultimaVacinacao);
                     string observacao = txtObservacaoAnimal.Text;
-                    a.SetObservacao(observacao);
+                    a.Observacao(observacao);
 
-                    bool no = a.GetReturn();
+                    bool nao = a.Return();
 
-                    if (!no)
+                    if (!nao)
                     {
                         MessageBox.Show("Edite os dados conforme necessário.", "Editar Dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
@@ -57,6 +74,9 @@ namespace GestaoPecuaria
                     txtDataUltimaVascAnimal.Clear();
                     txtObservacaoAnimal.Clear();
                     txtNomeNumeracaoAnimal.Focus();
+
+                    AnimalDAO DAO = new AnimalDAO();
+                    DAO.Cadastrar(a);
                 }
                 else
                 {

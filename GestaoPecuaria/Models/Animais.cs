@@ -4,16 +4,16 @@ using System.Windows.Forms;
 
 public class Animais
 {
-    private int idAnimal;
-    private string nomeNumeracao;
-    private string raca;
-    private string sexo;
-    private string dataNascimento;
-    private decimal peso;
-    private string ultimaVacinacao;
-    private string observacao;
+    public int idAnimal;
+    public string nomeNumeracao;
+    public string raca;
+    public string sexo;
+    public DateTime dataNascimento;
+    public decimal peso;
+    public DateTime ultimaVacinacao;
+    public string observacao;
 
-    public void SetNomeNumeracao(string nomeNumeracao)
+    public void NomeNumeracao(string nomeNumeracao)
     {
         if (nomeNumeracao.Length <= 50)
         {
@@ -25,7 +25,7 @@ public class Animais
         }
     }
 
-    public void SetRaca(string raca)
+    public void Raca(string raca)
     {
         if (raca.Length <= 50)
         {
@@ -37,7 +37,7 @@ public class Animais
         }
     }
 
-    public void SetSexo(string sexo)
+    public void Sexo(string sexo)
     {
         if(sexo.Equals("M") || sexo.Equals("F"))
         {
@@ -49,21 +49,16 @@ public class Animais
         }
     }
 
-    public void SetDataNascimento(string dataNascimento)
+    public void DataNascimento(DateTime dataNascimento)
     {
-        DateTime data;
-
-        if (DateTime.TryParseExact(dataNascimento, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data))
+        if (dataNascimento > DateTime.Now)
         {
-            this.dataNascimento = data.ToString("dd/MM/yyyy");
+            throw new Exception("A data de nascimento não pode ser no futuro.");
         }
-        else
-        {
-            throw new Exception("Data de nascimento inválida! Use o formato dd/MM/yyyy.");
-        }
+        this.dataNascimento = dataNascimento;
     }
 
-    public void SetPeso(decimal peso)
+    public void Peso(decimal peso)
     {
         if (peso <= 0)
         {
@@ -76,21 +71,20 @@ public class Animais
         this.peso = peso;
     }
 
-    public void SetUltimaVacinacao(string ultimaVacinacao)
+    public void UltimaVacinacao(DateTime ultimaVacinacao)
     {
-        DateTime data;
-
-        if (DateTime.TryParseExact(ultimaVacinacao, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out data))
+        if (ultimaVacinacao > DateTime.Now)
         {
-            this.ultimaVacinacao = data.ToString("dd/MM/yyyy");
+            throw new Exception("A data da última vacinação não pode ser no futuro.");
         }
-        else
+        if (ultimaVacinacao < dataNascimento)
         {
-            throw new Exception("Data de última vacinação inválida! Use o formato dd/MM/yyyy.");
+            throw new Exception("A última vacinação não pode ser antes da data de nascimento.");
         }
+        this.ultimaVacinacao = ultimaVacinacao;
     }
 
-    public void SetObservacao(string observacao)
+    public void Observacao(string observacao)
     {
         if (observacao.Length > 1000)
         {
@@ -100,7 +94,7 @@ public class Animais
         this.observacao = observacao;
     }
 
-    public bool GetReturn()
+    public bool Return()
     {
         string mensagem = "Nome: " + this.nomeNumeracao + "\n" +
                           "Raça: " + this.raca + "\n" +
@@ -115,5 +109,4 @@ public class Animais
     }
 }
 
-// Testando a bagunça
-// Testando a bagunça2
+
