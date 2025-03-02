@@ -35,6 +35,7 @@ namespace GestaoPecuaria.dao
                 comando.Parameters.AddWithValue("observacao", animais.observacao);
 
                 comando.ExecuteNonQuery();
+                Conexao.FecharConexao();
             }
             catch (Exception ex)
             {
@@ -60,7 +61,7 @@ namespace GestaoPecuaria.dao
                 comando.Parameters.AddWithValue("observacao", animais.observacao);
 
                 comando.ExecuteNonQuery();
-
+                Conexao.FecharConexao();
             }
             catch (Exception ex)
             {
@@ -81,14 +82,14 @@ namespace GestaoPecuaria.dao
                 da.Fill(dt);
 
 
-
+                Conexao.FecharConexao();
             }
             catch (Exception ex)
             {
                 throw new Exception("Erro ao conectar com o banco de dados: " + ex.Message);
 
             }
-
+            
             return dt;
         }
         public void ExcluirAnimal(string nomeNomeracao)
@@ -101,6 +102,7 @@ namespace GestaoPecuaria.dao
                 comando.Parameters.AddWithValue("@nomeNumeracao", nomeNomeracao);
 
                 comando.ExecuteNonQuery();
+                Conexao.FecharConexao();
             }
             catch (Exception ex)
             {
