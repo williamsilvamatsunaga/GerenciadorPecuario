@@ -28,5 +28,11 @@ namespace GestaoPecuaria
             FormAtualizarFuncionario form = new FormAtualizarFuncionario();
             form.ShowDialog();
         }
+
+        private void btListarAnimal_Click(object sender, EventArgs e)
+        {
+            FormListarAnimal form = new FormListarAnimal();
+            form.ShowDialog();
+        }
     }
 }

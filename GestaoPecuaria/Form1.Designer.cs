@@ -32,6 +32,7 @@
             this.btCadastrarAnimal = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btAtualizarAnimal = new System.Windows.Forms.Button();
+            this.btListarAnimal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -50,7 +51,7 @@
             this.btCadastrarAnimal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btCadastrarAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCadastrarAnimal.Location = new System.Drawing.Point(284, 178);
-            this.btCadastrarAnimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btCadastrarAnimal.Margin = new System.Windows.Forms.Padding(4);
             this.btCadastrarAnimal.Name = "btCadastrarAnimal";
             this.btCadastrarAnimal.Size = new System.Drawing.Size(185, 39);
             this.btCadastrarAnimal.TabIndex = 1;
@@ -80,16 +81,30 @@
             this.btAtualizarAnimal.UseVisualStyleBackColor = false;
             this.btAtualizarAnimal.Click += new System.EventHandler(this.btAtualizarAnimal_Click);
             // 
+            // btListarAnimal
+            // 
+            this.btListarAnimal.BackColor = System.Drawing.Color.Blue;
+            this.btListarAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btListarAnimal.Location = new System.Drawing.Point(284, 265);
+            this.btListarAnimal.Margin = new System.Windows.Forms.Padding(4);
+            this.btListarAnimal.Name = "btListarAnimal";
+            this.btListarAnimal.Size = new System.Drawing.Size(185, 39);
+            this.btListarAnimal.TabIndex = 4;
+            this.btListarAnimal.Text = "Listar Animais";
+            this.btListarAnimal.UseVisualStyleBackColor = false;
+            this.btListarAnimal.Click += new System.EventHandler(this.btListarAnimal_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.btListarAnimal);
             this.Controls.Add(this.btAtualizarAnimal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btCadastrarAnimal);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -103,6 +118,7 @@
         private System.Windows.Forms.Button btCadastrarAnimal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btAtualizarAnimal;
+        private System.Windows.Forms.Button btListarAnimal;
     }
 }
 

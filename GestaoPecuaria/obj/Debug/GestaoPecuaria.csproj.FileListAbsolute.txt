@@ -65,3 +65,4 @@ C:\Users\willi\OneDrive\Desktop\GerenciadorPecuario\GestaoPecuaria\obj\Debug\Ges
 C:\Users\willi\OneDrive\Desktop\GerenciadorPecuario\GestaoPecuaria\obj\Debug\GestaoPecuaria.exe
 C:\Users\willi\OneDrive\Desktop\GerenciadorPecuario\GestaoPecuaria\obj\Debug\GestaoPecuaria.pdb
 C:\Users\willi\OneDrive\Desktop\GerenciadorPecuario\GestaoPecuaria\obj\Debug\GestaoPecuaria.FormAtualizarFuncionario.resources
+C:\Users\willi\OneDrive\Desktop\GerenciadorPecuario\GestaoPecuaria\obj\Debug\GestaoPecuaria.FormListarAnimal.resources
