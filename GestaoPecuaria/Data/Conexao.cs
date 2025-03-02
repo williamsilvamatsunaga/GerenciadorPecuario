@@ -26,5 +26,9 @@ namespace GestaoPecuaria.Data
                 throw new Exception("Erro ao conectar. " + ex.Message);
             }
         }
+        public static void FecharConexao()
+        {
+            _conexao.Close();
+        }
     }
 }
