@@ -22,10 +22,10 @@ namespace GestaoPecuaria
         {
             try
             {
-                AnimalDAO d = new AnimalDAO();
+                AnimalDAO dao = new AnimalDAO();
 
               
-                dgvListarAnimais.DataSource = d.ListarAnimais();
+                dgvListarAnimais.DataSource = dao.ListarAnimais();
                 dgvListarAnimais.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)

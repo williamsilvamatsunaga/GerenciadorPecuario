@@ -34,5 +34,17 @@ namespace GestaoPecuaria
             FormListarAnimal form = new FormListarAnimal();
             form.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormExcluirAnimal form = new FormExcluirAnimal();
+            form.ShowDialog();
+        }
+
+        private void btExcluirAnimal_Click(object sender, EventArgs e)
+        {
+            FormExcluirAnimal form = new FormExcluirAnimal();
+            form.ShowDialog();
+        }
     }
 }

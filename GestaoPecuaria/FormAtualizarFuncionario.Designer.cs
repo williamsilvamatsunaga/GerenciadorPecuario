@@ -131,10 +131,10 @@
             // txtNomeNumeracaoAnimal
             // 
             this.txtNomeNumeracaoAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeNumeracaoAnimal.Location = new System.Drawing.Point(397, 106);
+            this.txtNomeNumeracaoAnimal.Location = new System.Drawing.Point(383, 106);
             this.txtNomeNumeracaoAnimal.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomeNumeracaoAnimal.Name = "txtNomeNumeracaoAnimal";
-            this.txtNomeNumeracaoAnimal.Size = new System.Drawing.Size(395, 30);
+            this.txtNomeNumeracaoAnimal.Size = new System.Drawing.Size(409, 30);
             this.txtNomeNumeracaoAnimal.TabIndex = 17;
             // 
             // label7
@@ -199,9 +199,9 @@
             this.label2.Location = new System.Drawing.Point(226, 110);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 22);
+            this.label2.Size = new System.Drawing.Size(149, 22);
             this.label2.TabIndex = 21;
-            this.label2.Text = "Nome/Numeração";
+            this.label2.Text = "Nome/Numeraçã:";
             // 
             // label1
             // 

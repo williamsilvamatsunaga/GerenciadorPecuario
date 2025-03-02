@@ -33,6 +33,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btAtualizarAnimal = new System.Windows.Forms.Button();
             this.btListarAnimal = new System.Windows.Forms.Button();
+            this.btExcluirAnimal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -94,11 +95,25 @@
             this.btListarAnimal.UseVisualStyleBackColor = false;
             this.btListarAnimal.Click += new System.EventHandler(this.btListarAnimal_Click);
             // 
+            // btExcluirAnimal
+            // 
+            this.btExcluirAnimal.BackColor = System.Drawing.Color.Red;
+            this.btExcluirAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btExcluirAnimal.Location = new System.Drawing.Point(578, 265);
+            this.btExcluirAnimal.Margin = new System.Windows.Forms.Padding(4);
+            this.btExcluirAnimal.Name = "btExcluirAnimal";
+            this.btExcluirAnimal.Size = new System.Drawing.Size(185, 39);
+            this.btExcluirAnimal.TabIndex = 6;
+            this.btExcluirAnimal.Text = "Excluir Animal";
+            this.btExcluirAnimal.UseVisualStyleBackColor = false;
+            this.btExcluirAnimal.Click += new System.EventHandler(this.btExcluirAnimal_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.btExcluirAnimal);
             this.Controls.Add(this.btListarAnimal);
             this.Controls.Add(this.btAtualizarAnimal);
             this.Controls.Add(this.label2);
@@ -119,6 +134,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btAtualizarAnimal;
         private System.Windows.Forms.Button btListarAnimal;
+        private System.Windows.Forms.Button btExcluirAnimal;
     }
 }
 

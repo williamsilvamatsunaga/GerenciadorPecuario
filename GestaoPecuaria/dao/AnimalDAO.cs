@@ -91,5 +91,21 @@ namespace GestaoPecuaria.dao
 
             return dt;
         }
+        public void ExcluirAnimal(string nomeNomeracao)
+        {
+            try
+            {
+                string sql = "DELETE FROM Animais WHERE nomeNumeracao = @nomeNumeracao";
+
+                MySqlCommand comando = new MySqlCommand(sql, Conexao.Conectar());
+                comando.Parameters.AddWithValue("@nomeNumeracao", nomeNomeracao);
+
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao conectar ao banco de dados " + ex.Message);
+            }
+        }
     }
 }
