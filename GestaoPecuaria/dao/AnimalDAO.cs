@@ -38,7 +38,7 @@ namespace GestaoPecuaria.dao
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao cadastrar animal " + ex.Message);
+                throw new Exception("Erro ao conectar com o banco de dados: " + ex.Message);
             }
         }
         public void Atualizar(Animais animais)
@@ -64,41 +64,32 @@ namespace GestaoPecuaria.dao
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao atualizar animal " + ex.Message);
+                throw new Exception("Erro ao conectar com o banco de dados: " + ex.Message);
             }
         }
-        public List<Animais> ListarTodos()
+        public DataTable ListarAnimais()
         {
+            DataTable dt = new DataTable();
+
             try
             {
-                List<Animais> animais = new List<Animais>();
-                string sql = "SELECT * FROM Animais ORDER BY nomeNumeracao";
+                string select = "SELECT * FROM Animais ORDER BY nomeNumeracao";
 
-                MySqlCommand comando = new MySqlCommand(sql, Conexao.Conectar());
+                MySqlCommand comando = new MySqlCommand(select, Conexao.Conectar());
+                MySqlDataAdapter da = new MySqlDataAdapter(comando);
 
-                MySqlDataReader reader = comando.ExecuteReader();
+                da.Fill(dt);
 
-                while (reader.Read())
-                {
-                    Animais a = new Animais();
 
-                    a.nomeNumeracao = reader.GetString("nomeNumeracao");
-                    a.raca = reader.GetString("raca");
-                    a.sexo = reader.GetString("sexo");
-                    a.dataNascimento = reader.GetDateTime("dataNascimento");
-                    a.peso = reader.GetDecimal("peso");
-                    a.ultimaVacinacao = reader.GetDateTime("ultimaVacinacao");
-                    a.observacao = reader.GetString("observacao");
 
-                    animais.Add(a);
-                }
-
-                return animais;
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao listar animais: " +ex.Message);
+                throw new Exception("Erro ao conectar com o banco de dados: " + ex.Message);
+
             }
+
+            return dt;
         }
     }
 }

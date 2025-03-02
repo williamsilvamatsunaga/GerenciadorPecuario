@@ -24,12 +24,8 @@ namespace GestaoPecuaria
             {
                 AnimalDAO d = new AnimalDAO();
 
-                List<Animais> animais = d.ListarTodos();
-
-                MessageBox.Show("Total de registros: " + animais.Count);
-
-                dgvListarAnimais.DataSource = null;
-                dgvListarAnimais.DataSource = animais;
+              
+                dgvListarAnimais.DataSource = d.ListarAnimais();
                 dgvListarAnimais.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)
