@@ -44,15 +44,15 @@
             this.btCadastrarAnimal2 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPesoAnimal = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(16, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(776, 65);
+            this.label1.Size = new System.Drawing.Size(1035, 80);
             this.label1.TabIndex = 1;
             this.label1.Text = "Cadastrar Animal";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,9 +61,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(172, 91);
+            this.label2.Location = new System.Drawing.Point(229, 112);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(122, 19);
+            this.label2.Size = new System.Drawing.Size(153, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Nome/Numeração";
             // 
@@ -71,9 +72,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(172, 123);
+            this.label3.Location = new System.Drawing.Point(229, 151);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 19);
+            this.label3.Size = new System.Drawing.Size(56, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Raça:";
             // 
@@ -81,9 +83,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(172, 155);
+            this.label4.Location = new System.Drawing.Point(229, 191);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 19);
+            this.label4.Size = new System.Drawing.Size(55, 22);
             this.label4.TabIndex = 4;
             this.label4.Text = "Sexo:";
             // 
@@ -91,9 +94,10 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(172, 187);
+            this.label5.Location = new System.Drawing.Point(229, 230);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 19);
+            this.label5.Size = new System.Drawing.Size(175, 22);
             this.label5.TabIndex = 5;
             this.label5.Text = "Data de Nascimento:";
             // 
@@ -101,9 +105,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(173, 251);
+            this.label6.Location = new System.Drawing.Point(231, 309);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(169, 19);
+            this.label6.Size = new System.Drawing.Size(221, 22);
             this.label6.TabIndex = 6;
             this.label6.Text = "Data da Ultima Vacinação:";
             // 
@@ -111,34 +116,38 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(173, 283);
+            this.label7.Location = new System.Drawing.Point(231, 348);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 19);
+            this.label7.Size = new System.Drawing.Size(116, 22);
             this.label7.TabIndex = 7;
             this.label7.Text = "Observação: ";
             // 
             // txtNomeNumeracaoAnimal
             // 
             this.txtNomeNumeracaoAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeNumeracaoAnimal.Location = new System.Drawing.Point(300, 88);
+            this.txtNomeNumeracaoAnimal.Location = new System.Drawing.Point(400, 108);
+            this.txtNomeNumeracaoAnimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNomeNumeracaoAnimal.Name = "txtNomeNumeracaoAnimal";
-            this.txtNomeNumeracaoAnimal.Size = new System.Drawing.Size(328, 26);
+            this.txtNomeNumeracaoAnimal.Size = new System.Drawing.Size(436, 30);
             this.txtNomeNumeracaoAnimal.TabIndex = 0;
             // 
             // txtRacaAnimal
             // 
             this.txtRacaAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRacaAnimal.Location = new System.Drawing.Point(221, 120);
+            this.txtRacaAnimal.Location = new System.Drawing.Point(295, 148);
+            this.txtRacaAnimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtRacaAnimal.Name = "txtRacaAnimal";
-            this.txtRacaAnimal.Size = new System.Drawing.Size(407, 26);
+            this.txtRacaAnimal.Size = new System.Drawing.Size(541, 30);
             this.txtRacaAnimal.TabIndex = 1;
             // 
             // txtDataNascAnimal
             // 
             this.txtDataNascAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataNascAnimal.Location = new System.Drawing.Point(314, 184);
+            this.txtDataNascAnimal.Location = new System.Drawing.Point(419, 226);
+            this.txtDataNascAnimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDataNascAnimal.Name = "txtDataNascAnimal";
-            this.txtDataNascAnimal.Size = new System.Drawing.Size(314, 26);
+            this.txtDataNascAnimal.Size = new System.Drawing.Size(417, 30);
             this.txtDataNascAnimal.TabIndex = 3;
             // 
             // cbSexoAnimal
@@ -148,34 +157,38 @@
             this.cbSexoAnimal.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.cbSexoAnimal.Location = new System.Drawing.Point(221, 152);
+            this.cbSexoAnimal.Location = new System.Drawing.Point(295, 187);
+            this.cbSexoAnimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbSexoAnimal.Name = "cbSexoAnimal";
-            this.cbSexoAnimal.Size = new System.Drawing.Size(41, 27);
+            this.cbSexoAnimal.Size = new System.Drawing.Size(53, 30);
             this.cbSexoAnimal.TabIndex = 2;
             // 
             // txtDataUltimaVascAnimal
             // 
             this.txtDataUltimaVascAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataUltimaVascAnimal.Location = new System.Drawing.Point(347, 248);
+            this.txtDataUltimaVascAnimal.Location = new System.Drawing.Point(463, 305);
+            this.txtDataUltimaVascAnimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDataUltimaVascAnimal.Name = "txtDataUltimaVascAnimal";
-            this.txtDataUltimaVascAnimal.Size = new System.Drawing.Size(281, 26);
+            this.txtDataUltimaVascAnimal.Size = new System.Drawing.Size(373, 30);
             this.txtDataUltimaVascAnimal.TabIndex = 5;
             // 
             // txtObservacaoAnimal
             // 
             this.txtObservacaoAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObservacaoAnimal.Location = new System.Drawing.Point(177, 305);
+            this.txtObservacaoAnimal.Location = new System.Drawing.Point(236, 375);
+            this.txtObservacaoAnimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtObservacaoAnimal.Name = "txtObservacaoAnimal";
-            this.txtObservacaoAnimal.Size = new System.Drawing.Size(452, 26);
+            this.txtObservacaoAnimal.Size = new System.Drawing.Size(601, 30);
             this.txtObservacaoAnimal.TabIndex = 6;
             // 
             // btCadastrarAnimal2
             // 
             this.btCadastrarAnimal2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btCadastrarAnimal2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btCadastrarAnimal2.Location = new System.Drawing.Point(489, 374);
+            this.btCadastrarAnimal2.Location = new System.Drawing.Point(652, 460);
+            this.btCadastrarAnimal2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btCadastrarAnimal2.Name = "btCadastrarAnimal2";
-            this.btCadastrarAnimal2.Size = new System.Drawing.Size(139, 32);
+            this.btCadastrarAnimal2.Size = new System.Drawing.Size(185, 39);
             this.btCadastrarAnimal2.TabIndex = 7;
             this.btCadastrarAnimal2.Text = "Cadastrar";
             this.btCadastrarAnimal2.UseVisualStyleBackColor = false;
@@ -185,37 +198,27 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(173, 219);
+            this.label8.Location = new System.Drawing.Point(231, 270);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(69, 19);
+            this.label8.Size = new System.Drawing.Size(87, 22);
             this.label8.TabIndex = 16;
             this.label8.Text = "Peso KG:";
             // 
             // txtPesoAnimal
             // 
             this.txtPesoAnimal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPesoAnimal.Location = new System.Drawing.Point(248, 216);
+            this.txtPesoAnimal.Location = new System.Drawing.Point(331, 266);
+            this.txtPesoAnimal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPesoAnimal.Name = "txtPesoAnimal";
-            this.txtPesoAnimal.Size = new System.Drawing.Size(380, 26);
+            this.txtPesoAnimal.Size = new System.Drawing.Size(505, 30);
             this.txtPesoAnimal.TabIndex = 4;
-            // 
-            // label9
-            // 
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(58, 55);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 36);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "*";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormCadastrarAnimal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label9);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.txtPesoAnimal);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btCadastrarAnimal2);
@@ -232,6 +235,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormCadastrarAnimal";
             this.Text = "FormCadastrarAnimal";
             this.ResumeLayout(false);
@@ -257,6 +261,5 @@
         private System.Windows.Forms.Button btCadastrarAnimal2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtPesoAnimal;
-        private System.Windows.Forms.Label label9;
     }
 }

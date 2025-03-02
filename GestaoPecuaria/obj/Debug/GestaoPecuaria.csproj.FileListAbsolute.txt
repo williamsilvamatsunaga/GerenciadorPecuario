@@ -64,3 +64,4 @@ C:\Users\willi\OneDrive\Desktop\GerenciadorPecuario\GestaoPecuaria\obj\Debug\Ges
 C:\Users\willi\OneDrive\Desktop\GerenciadorPecuario\GestaoPecuaria\obj\Debug\GestaoPe.22206CD1.Up2Date
 C:\Users\willi\OneDrive\Desktop\GerenciadorPecuario\GestaoPecuaria\obj\Debug\GestaoPecuaria.exe
 C:\Users\willi\OneDrive\Desktop\GerenciadorPecuario\GestaoPecuaria\obj\Debug\GestaoPecuaria.pdb
+C:\Users\willi\OneDrive\Desktop\GerenciadorPecuario\GestaoPecuaria\obj\Debug\GestaoPecuaria.FormAtualizarFuncionario.resources

@@ -39,5 +39,31 @@ namespace GestaoPecuaria.dao
                 throw new Exception("Erro ao cadastrar animal " + ex.Message);
             }
         }
+        public void Atualizar(Animais animais)
+        {
+            try
+            {
+                string sql = "UPDATE Animais SET nomeNumeracao = @nomeNumeracao, raca = @raca, sexo = @sexo, dataNascimento = @dataNascimento," +
+                    "peso = @peso, ultimaVacinacao = @ultimaVacinacao, observacao = @observacao " +
+                    "WHERE nomeNumeracao = @nomeNumeracao";
+
+                MySqlCommand comando = new MySqlCommand(sql, Conexao.Conectar());
+
+                comando.Parameters.AddWithValue("nomeNumeracao", animais.nomeNumeracao);
+                comando.Parameters.AddWithValue("raca", animais.raca);
+                comando.Parameters.AddWithValue("sexo", animais.sexo);
+                comando.Parameters.AddWithValue("dataNascimento", animais.dataNascimento);
+                comando.Parameters.AddWithValue("peso", animais.peso);
+                comando.Parameters.AddWithValue("ultimaVacinacao", animais.ultimaVacinacao);
+                comando.Parameters.AddWithValue("observacao", animais.observacao);
+
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao atualizar animal" + ex.Message);
+            }
+        }
     }
 }

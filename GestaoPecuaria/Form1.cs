@@ -22,5 +22,11 @@ namespace GestaoPecuaria
             FormCadastrarAnimal form = new FormCadastrarAnimal();
             form.ShowDialog();
         }
+
+        private void btAtualizarAnimal_Click(object sender, EventArgs e)
+        {
+            FormAtualizarFuncionario form = new FormAtualizarFuncionario();
+            form.ShowDialog();
+        }
     }
 }
