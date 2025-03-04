@@ -94,7 +94,7 @@ public class Animais
         this.observacao = observacao;
     }
 
-    public bool Return()
+    public bool ConfirmarDados()
     {
         string mensagem = "Nome: " + this.nomeNumeracao + "\n" +
                           "Raça: " + this.raca + "\n" +

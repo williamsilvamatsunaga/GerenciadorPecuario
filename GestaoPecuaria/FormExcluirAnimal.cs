@@ -27,6 +27,8 @@ namespace GestaoPecuaria
                 string nomeNumeracao = txtNomeNumeracaoAnimal2.Text;
                 dao.ExcluirAnimal(nomeNumeracao);
 
+                txtNomeNumeracaoAnimal2.Clear();
+
                 MessageBox.Show("Animal excluído com sucesso!", "Excluir Animal", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch(Exception ex)

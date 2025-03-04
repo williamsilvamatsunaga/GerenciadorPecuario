@@ -58,7 +58,7 @@ namespace GestaoPecuaria
                     string observacao = txtObservacaoAnimal.Text;
                     a.Observacao(observacao);
 
-                    bool nao = a.Return();
+                    bool nao = a.ConfirmarDados();
 
                     if (!nao)
                     {
